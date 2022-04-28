@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /websocket-service
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/testdb
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
