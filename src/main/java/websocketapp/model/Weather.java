@@ -1,25 +1,22 @@
 package websocketapp.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import javax.persistence.*;
-
 @Data
-@Entity
-@Table(name = "weather")
+@AllArgsConstructor
 public class Weather {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "weatherSeq")
-    @SequenceGenerator(name = "weatherSeq", sequenceName = "weatherSeq", allocationSize = 1)
-    private String idStacji;
-    private String stacja;
-    private String dataPomiaru;
-    private String godzinaPomiaru;
-    private String temperatura;
-    private String predkoscWiatru;
-    private String kierunekWiatru;
-    private String wilgotnoscWzgledna;
-    private String sumaOpadu;
-    private String cisnienie;
+        private String id_stacji;
+        private String stacja;
+        private String rzeka;
+        private String województwo;
+        private String stan_wody;
+        private String stan_wody_data_pomiaru;
+        private String temperatura_wody;
+        private String temperatura_wody_data_pomiaru;
+        private String zjawisko_lodowe;
+        private String zjawisko_lodowe_data_pomiaru;
+        private String zjawisko_zarastania;
+        private String zjawisko_zarastania_data_pomiaru;
 }

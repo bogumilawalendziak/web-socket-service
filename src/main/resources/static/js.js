@@ -5,7 +5,7 @@ function showMessage(value) {
 }
 
 function connect() {
-    client = Stomp.client('ws://localhost:8081/websocket-service/chat');
+    client = Stomp.client('ws://localhost:8080/websocket-service/chat');
     client.connect({}, function () {
         client.subscribe("/topic/music", function(message){
 
@@ -14,7 +14,7 @@ function connect() {
     })
 
     client.connect({}, function () {
-        client.subscribe("/topic/weather", function(message){
+        client.subscribe("/topic/hydro", function(message){
 
             showMessage(message.body)
         });

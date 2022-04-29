@@ -12,12 +12,12 @@ public class ScheduleUtil {
     private final WeatherService weatherService;
     private final MusicService musicService;
 
-    @Scheduled(fixedDelay = 12000)
+    @Scheduled(fixedDelay = 15000)
     public void getWeather() {
         weatherService.checkWeather();
     }
 
-    @Scheduled(fixedRate = 2)
+    @Scheduled(fixedRate = 5000)
     public void getMusic() {
         musicService.checkMusic();
     }

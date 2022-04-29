@@ -2,8 +2,8 @@ package websocketapp.repository;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.JpaRepository;
-import websocketapp.model.Weather;
+import websocketapp.model.Hydro;
 
 @Repository
-public interface WeatherRepository extends JpaRepository<Weather,Integer> {
+public interface HydroRepository extends JpaRepository<Hydro,Integer> {
 }
